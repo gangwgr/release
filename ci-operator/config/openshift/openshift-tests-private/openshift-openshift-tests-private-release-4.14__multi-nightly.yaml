@@ -1175,6 +1175,7 @@ tests:
       E2E_RUN_TAGS: not @workloads
       PERSISTENT_MONITORING: "false"
     test:
+    - ref: wait
     - chain: openshift-e2e-test-qe-destructive
     workflow: cucushift-installer-rehearse-gcp-ipi-capability-additionalcaps
 - as: gcp-ipi-basecap-none-additionalcaps-arm-f7
@@ -1204,6 +1205,7 @@ tests:
       E2E_RUN_TAGS: not @storage
       SIZE_VARIANT: compact
     test:
+    - ref: wait
     - chain: openshift-e2e-test-qe-destructive
     workflow: cucushift-installer-rehearse-gcp-ipi-filestore-csi
 - as: gcp-ipi-compact-filestore-csi-arm-f14
